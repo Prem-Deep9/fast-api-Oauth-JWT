@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres
+    container_name: todoapp_db
+    restart: always
+    environment:
+      POSTGRES_USER: AppSuperUser
+      POSTGRES_PASSWORD: s3cret
+      POSTGRES_DB: ToDoAppDB
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+ 
+volumes:
+  pgdata:
