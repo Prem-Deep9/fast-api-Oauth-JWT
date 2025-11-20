@@ -8,8 +8,8 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from starlette import status
 
-from ..database import SessionLocal
-from ..models import Users
+from ToDoApp.database import SessionLocal
+from ToDoApp.models import Users
 
 SECRET_KEY = "a8f3c9d1e7b6f4a2c5d8e9a1b7c3f6d4"
 ALGORITHM = "HS256"

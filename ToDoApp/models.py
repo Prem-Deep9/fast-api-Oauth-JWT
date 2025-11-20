@@ -1,7 +1,9 @@
-from .database import Base
-from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
 
-class Users(Base): 
+from ToDoApp.database import Base
+
+
+class Users(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -12,6 +14,7 @@ class Users(Base):
     is_active = Column(Boolean, default=True)
     role = Column(String)
 
+
 class Todos(Base):
     __tablename__ = "todos"
 
@@ -21,4 +24,3 @@ class Todos(Base):
     priority = Column(Integer)
     complete = Column(Boolean, default=False)
     user_id = Column(Integer, ForeignKey("users.id"))
-
