@@ -1,6 +1,5 @@
-from ToDoApp.database import Base
-from sqlalchemy import Column, Integer, String, Boolean
-
+from .database import Base
+from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 
 class Users(Base): 
     __tablename__ = "users"
@@ -21,5 +20,5 @@ class Todos(Base):
     description = Column(String)
     priority = Column(Integer)
     complete = Column(Boolean, default=False)
-    user_id = Column(Integer, foreign_key="users.id")
+    user_id = Column(Integer, ForeignKey("users.id"))
 
