@@ -1,9 +1,8 @@
-
+from fastapi import FastAPI
 
 from ToDoApp import models
 from ToDoApp.database import engine
 from ToDoApp.routers import auth, todos
-from fastapi import FastAPI
 
 app = FastAPI()
 
