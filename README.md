@@ -47,4 +47,5 @@ uv add to install new libraries and add new dependencies to the pyproject.toml f
 Install dependencies
    - Run `uv sync` to install all dependencies
 
-Run `uvicorn ToDoApp.main:app--reload` to run the app
+Run `uv run fastapi run main.py` to run the app in prod
+Run `uv run fastapi dev main.py` to run the app in dev
